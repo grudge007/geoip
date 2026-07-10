@@ -1,1 +1,3 @@
 /test
+vendor/
+GeoLite2-Country.mmdb
