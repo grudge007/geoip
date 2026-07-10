@@ -1,0 +1,16 @@
+# The human-readable name shown in the Traefik Pilot/Catalog UI
+displayName: "GeoIP Country Header Injector"
+
+# The type must be "middleware" (the other option is "provider")
+type: "middleware"
+
+# The exact Go module import path you used in your go.mod file
+import: "github.com/grudge007/geoip"
+
+# A brief summary of what your study project does
+summary: "Looks up the client's IP in a local MaxMind GeoLite2 database and injects the English country name into a custom request header."
+
+# Traefik uses this block to automatically test your plugin when it boots up
+testData:
+  dbPath: "/etc/traefik/GeoLite2-Country.mmdb"
+  headerName: "X-Geo-Country"
